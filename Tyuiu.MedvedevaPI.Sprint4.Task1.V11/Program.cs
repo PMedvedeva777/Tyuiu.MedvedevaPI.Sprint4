@@ -9,12 +9,17 @@ class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
-        int[] numsArray = { 2, 6, 5, 5, 1, 5, 6, 5, 5, 5, 1, 5, 3, 6, 6, 1, 6 };
-        Console.WriteLine("Исходный массив:");
+        int len;
+        Console.WriteLine("Введите количество элементов массива:");
+        len = Convert.ToInt32(Console.ReadLine());
+        int[] numsArray = new int[len];
         for (int i = 0; i <= numsArray.Length - 1; i++)
         {
-            Console.WriteLine(numsArray[i]);
+            Console.WriteLine("Введите значение" + i + "элемента массива:");
+            numsArray[i] = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(numsArray[i] + "\t");
         }
+        Console.WriteLine();
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
